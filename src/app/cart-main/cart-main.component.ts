@@ -27,13 +27,11 @@ export class CartMainComponent {
     }
   ];
 
-  removeProduct(id: number) {
+  removeProduct(id: number, name: string) {
     const index = this.products.findIndex(product => product.id === id);
     if (index !== -1) {
       this.products.splice(index, 1);
-      //alert("Xoa thanh cong");
+      alert("Đã xóa " + name + "!");
     }
-      
-    
   }
 }
