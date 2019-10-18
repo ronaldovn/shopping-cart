@@ -22,10 +22,12 @@
     <div class="col right">
       <div class="quantity">
         <input
+        #inputElement
           type="number"
           class="quantity"
           step="1"
           [value]="product.quantity"
+          (input)="changeQuantity(inputElement.value)"
         />
       </div>
 

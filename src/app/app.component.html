@@ -1,13 +1,13 @@
 <main>
   <header class="container">
-    <app-cart-header></app-cart-header>
+    <app-cart-header [numberItems]="4"></app-cart-header>
   </header>
 
   <section class="container">
-    <app-cart-main></app-cart-main>
+    <app-cart-main [products]="products"></app-cart-main>
   </section>
 
   <section class="container">
-    <app-cart-footer></app-cart-footer>
+    <app-cart-footer [subTotal]="subTotal" [tax]="tax" [total]="total"></app-cart-footer>
   </section>
 </main>

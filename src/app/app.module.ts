@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { registerLocaleData } from '@angular/common';
 import localeVi from '@angular/common/locales/vi';
@@ -11,6 +12,8 @@ import { CartHeaderComponent } from './cart-header/cart-header.component';
 import { CartMainComponent } from './cart-main/cart-main.component';
 import { CartFooterComponent } from './cart-footer/cart-footer.component';
 
+import { Product } from "./product.model";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,7 @@ import { CartFooterComponent } from './cart-footer/cart-footer.component';
     CartFooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
