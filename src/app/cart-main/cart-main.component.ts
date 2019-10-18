@@ -13,7 +13,7 @@ export class CartMainComponent {
       description: "Description 1",
       image:
         "https://scdn.thitruongsi.com/image/cached/size/w800-h0/img/product/2018/01/07/e8d9b0a0-f3aa-11e7-98a7-a9a3955606ba.jpg",
-      price: 250000,
+      price: 550000,
       quantity: 1
     },
     {
