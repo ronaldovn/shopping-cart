@@ -1,13 +1,22 @@
 <main>
   <header class="container">
-    <app-cart-header [numberItems]="4"></app-cart-header>
+    <app-cart-header [numberItems]="numberItems"></app-cart-header>
   </header>
 
   <section class="container">
-    <app-cart-main [products]="products"></app-cart-main>
+    <app-cart-main
+      [products]="products"
+      (onRemoveProduct)="handleRemoveProduct($event)"
+      (onThayDoiSL)="handleThayDoiSL($event)"
+    ></app-cart-main>
   </section>
 
   <section class="container">
-    <app-cart-footer [subTotal]="subTotal" [tax]="tax" [total]="total"></app-cart-footer>
+    <app-cart-footer
+      [subTotal]="subTotal"
+      [tax]="tax"
+      [total]="total"
+      (onApplyPromoCode)="handleApplyPromoCode($event)"
+    ></app-cart-footer>
   </section>
 </main>

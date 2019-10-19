@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Product } from "../product.model";
 
 @Component({
@@ -6,8 +6,13 @@ import { Product } from "../product.model";
   templateUrl: "./cart-main.component.html"
 })
 export class CartMainComponent {
-  @Input() products: Product[]
+  @Input() products: Product[];
+  @Output() onRemoveProduct = new EventEmitter();
+  @Output() onThayDoiSL = new EventEmitter();
 
+  RemoveProduct(product: Product) {
+    this.onRemoveProduct.emit(product);
+  }
   // products: Product[] = [
   //   {
   //     id: 1,
@@ -37,8 +42,12 @@ export class CartMainComponent {
     }
   }
 
-  changeQuantity(value:string)
-  {
+  thayDoiSL(input: HTMLInputElement, sanpham: Product) {
+    sanpham.quantity=parseInt( input.value);
+    this.onThayDoiSL.emit( sanpham);
+  }
+
+  changeQuantity(value: string) {
     console.log(value);
   }
 }
