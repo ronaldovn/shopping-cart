@@ -12,7 +12,7 @@ export class CartFooterComponent {
   @Output() onApplyPromoCode = new EventEmitter();
 
   applyPromoCode() {
-    this.onApplyPromoCode.emit("promoCode");
+    this.onApplyPromoCode.emit(this.promoCode);
     // if(this.promoCode==="mua thu")
     //   alert("Bạn được giảm giá 30%");
   }
