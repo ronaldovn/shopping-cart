@@ -10,6 +10,7 @@ export class CartFooterComponent {
   @Input() total: number;
   promoCode: string = "";
   @Output() onApplyPromoCode = new EventEmitter();
+  @Input() numDisCount:number;
 
   applyPromoCode() {
     this.onApplyPromoCode.emit(this.promoCode);

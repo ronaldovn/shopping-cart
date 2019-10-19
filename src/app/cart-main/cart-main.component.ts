@@ -43,8 +43,11 @@ export class CartMainComponent {
   }
 
   thayDoiSL(input: HTMLInputElement, sanpham: Product) {
-    sanpham.quantity=parseInt( input.value);
-    this.onThayDoiSL.emit( sanpham);
+    if (parseInt(input.value) <= 0) {
+      sanpham.quantity = 0;
+      input.value = "0";
+    } else sanpham.quantity = parseInt(input.value);
+    this.onThayDoiSL.emit(sanpham);
   }
 
   changeQuantity(value: string) {

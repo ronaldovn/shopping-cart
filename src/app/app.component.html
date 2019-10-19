@@ -13,10 +13,13 @@
 
   <section class="container">
     <app-cart-footer
+      *ngIf="total > 0"
       [subTotal]="subTotal"
       [tax]="tax"
       [total]="total"
+      [numDisCount]="numDisCount"
       (onApplyPromoCode)="handleApplyPromoCode($event)"
     ></app-cart-footer>
+    <h1 *ngIf="total == 0">Ko co sp nao!</h1>
   </section>
 </main>

@@ -47,6 +47,7 @@ export class AppComponent implements DoCheck, OnInit {
   numberItems: number = 0;
   totalItems: number = 0;
   disCount: number = 100;
+  numDisCount: number = 0;
 
   // ngOnInit() {
   //   console.log("Khoi tao main");
@@ -75,6 +76,7 @@ export class AppComponent implements DoCheck, OnInit {
     thanhTien = tongTien + this.tax;
 
     //this.total = tongTien + this.tax;
+    this.numDisCount = this.total - (thanhTien * this.disCount) / 100;
     this.total = (thanhTien * this.disCount) / 100;
 
     //console.log("num",numberItems);
